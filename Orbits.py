@@ -15,7 +15,7 @@ otype=raw_input("Do you want to find circular orbit? Y/N:  ")
 	
 if otype == 'Y' or otype=='y':
 	while r_h<=3:
-		r_h = float(raw_input("For cylcic orbit, this probram can calculate only when r>3 GM. Please enter the radius again:  " ))
+		r_h = float(raw_input("For cylcic orbit r>3 GM. Please enter the radius again:  " ))
     
 	vr_h= 0.0 # radial velocity at tau = 1/2
 	l= r_h/math.sqrt((r_h-3))# angular momentum evaluated assuming r=constant
@@ -35,7 +35,7 @@ else:
 
 
 NI = int(total_t/delta_t) # number of itterations
-
+ 
 
 ################
 
@@ -70,4 +70,5 @@ plt.plot(xdata[0],ydata[0],'r^',markersize=10)
 plt.plot(0,0,'ro',markersize=20)
 plt.ylabel("y (GM)")
 plt.xlabel("x (GM)")
+plt.title('Orbit in Schwarzschild Space time')
 plt.show()
